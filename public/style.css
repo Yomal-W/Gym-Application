@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+.image-text-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image-text-container img {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+
+.muscle-group {
+    display: inline-block;
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.muscle-group img {
+    width: 100px;
+    height: 100px;
+}
+
+.exercise {
+    margin-bottom: 1rem;
+}
+
+.exercise-entry {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    header nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .image-text-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .muscle-group {
+        display: inline-block;
+        text-align: center;
+        margin: 1rem;
+    }
+}
+

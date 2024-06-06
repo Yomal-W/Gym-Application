@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muscle Mission</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="nav-icon">🏠</a>
+            <a href="#workout" class="nav-icon">💪</a>
+            <a href="#history" class="nav-icon">⏰</a>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h1>Muscle Mission</h1>
+        <div class="image-text-container">
+            <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Image associated with text">
+            <p>Text related to image</p>
+        </div>
+        <div class="image-text-container">
+            <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Image associated with text">
+            <p>Text related to image</p>
+        </div>
+    </section>
 
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script>
-        
+    <section id="workout">
+        <h2 id="workout-title">User title of workout</h2>
+        <p id="workout-time">00:00</p>
+        <p id="workout-rating">Workout self-rating: ★★★★☆</p>
+        <button onclick="showExerciseForm()">Add Exercise</button>
+        <button onclick="cancelWorkout()">Cancel Workout</button>
+        <div id="exercise-form">
+            <h3>Select muscle group</h3>
+            <div class="muscle-group" onclick="selectMuscleGroup('Chest')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Chest Img">
+                <p>Chest</p>
+            </div>
+            <div class="muscle-group" onclick="selectMuscleGroup('Back')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Back Img">
+                <p>Back</p>
+            </div>
+            <!-- Add more muscle groups as needed -->
+        </div>
+        <div id="exercise-list"></div>
+        <div id="exercise-entry-form"></div>
+    </section>
 
-        let biggerNumber = _.sum([5, 4, 3, 2, 1]); //Lodash has provided us with a function here which adds numbers 
+    <section id="history">
+        <h2>Workout history</h2>
+        <div class="workout-history">
+            <!-- Workout history entries will be populated here -->
+        </div>
+    </section>
 
-        console.log(biggerNumber);
-    </script>
-
-    <p>Yomal</p>
-  </body>
-
+    <script src="script.js"></script>
+</body>
 </html>
+
+
+
