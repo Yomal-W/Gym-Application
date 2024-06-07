@@ -7,58 +7,181 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home" class="nav-icon">🏠</a>
-            <a href="#workout" class="nav-icon">💪</a>
-            <a href="#history" class="nav-icon">⏰</a>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h1>Muscle Mission</h1>
-        <div class="image-text-container">
-            <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Image associated with text">
-            <p>Text related to image</p>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <a href="#home"><button><li>Home</li></button></a>
+                    <a href="#workout"><button><li>Workout</li></button></a>
+                    <a href="#history"><button><li>History</li></button></a>
+                </ul>
+            </nav>
         </div>
-        <div class="image-text-container">
-            <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Image associated with text">
-            <p>Text related to image</p>
-        </div>
-    </section>
+    </div>
 
-    <section id="workout">
-        <h2 id="workout-title">User title of workout</h2>
-        <p id="workout-time">00:00</p>
-        <p id="workout-rating">Workout self-rating: ★★★★☆</p>
-        <button onclick="showExerciseForm()">Add Exercise</button>
-        <button onclick="cancelWorkout()">Cancel Workout</button>
-        <div id="exercise-form">
-            <h3>Select muscle group</h3>
-            <div class="muscle-group" onclick="selectMuscleGroup('Chest')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Chest Img">
-                <p>Chest</p>
+    <div id="home">
+        <h1>Home</h1>
+        <div id="home-info-1">
+            <div class="container">
+                <div class="home-cols">
+                    <div class="home-img">
+                        <figure class="fig-mission">
+                            <img src="images-gym-app/anna-pelzer-IGfIGP5ONV0-unsplash.jpg" alt="Vegan salad bowl - Anna Pelzer">
+                            <figcaption><a href="https://unsplash.com/photos/bowl-of-vegetable-salads-IGfIGP5ONV0" target="_blank" class="caption-link">Vegan salad bowl - Anna Pelzer</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="mission-desc">
+                        <h3>The Importance Of Nutrition</h3>
+                        <p>Nutrition plays an integral role in enhancing gym performance and achieving muscle-building goals. Consuming nutrient-dense meals, like the one depicted in the image, is essential for providing the body with the vital vitamins, minerals, and macronutrients necessary for energy production, muscle repair, and overall health. A balanced plate featuring a variety of colourful vegetables, legumes, healthy fats, and complex carbohydrates supports sustained energy levels throughout workouts, enhances muscle recovery post-exercise, and aids in effective weight management. Vegetables, such as leafy greens, tomatoes, and bell peppers, are rich in vitamins A, C, and K, fibre, and antioxidants, which help reduce inflammation and oxidative stress. Legumes, like chickpeas, offer a high protein content along with essential minerals like iron and magnesium, crucial for muscle repair and growth. Healthy fats, particularly from sources like avocado, provide monounsaturated fats, potassium, and fibre, supporting heart health and aiding in the absorption of fat-soluble vitamins. Complex carbohydrates from sweet potatoes deliver a slow-release source of energy, ideal for prolonged physical activities. Incorporating a variety of foods ensures a comprehensive range of nutrients, essential for overall well-being. Proper meal timing around workouts is also crucial. Consuming a balanced meal rich in carbohydrates and protein 2-3 hours before a workout ensures adequate energy supply, while a post-workout meal or snack within 30 minutes to 2 hours aids in muscle recovery and replenishment of glycogen stores. Additionally, staying hydrated with water-rich foods and adequate fluid intake is vital for maintaining optimal bodily functions and muscle performance. By prioritising balanced nutrition and hydration, gym-goers can effectively fuel their workouts, enhance performance, support muscle growth, and achieve their fitness goals. This holistic approach to diet and exercise fosters not only physical improvements but also contributes to overall health and well-being, making it a fundamental aspect of any fitness regimen.</p>
+                    </div>
+                </div>
             </div>
-            <div class="muscle-group" onclick="selectMuscleGroup('Back')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Back Img">
-                <p>Back</p>
-            </div>
-            <!-- Add more muscle groups as needed -->
         </div>
-        <div id="exercise-list"></div>
-        <div id="exercise-entry-form"></div>
-    </section>
 
-    <section id="history">
-        <h2>Workout history</h2>
-        <div class="workout-history">
-            <!-- Workout history entries will be populated here -->
+        <div id="home-info-2">
+            <div class="container">
+                <div class="home-cols">
+                    <div class="mission-desc">
+                        <h3>Find Your Gym Community</h3>
+                        <p>The gym community is a unique and powerful social network that fosters motivation, support, and camaraderie among individuals dedicated to fitness and health. This image captures the essence of a gym community: a group of diverse individuals coming together to share their fitness journeys. In such communities, members often find themselves inspired by the achievements and progress of others, pushing each other to new heights. The sense of belonging and shared purpose creates an environment where everyone, regardless of their fitness level, feels encouraged and accepted. Beyond just a place to exercise, the gym becomes a social hub where friendships are formed, and goals are collectively pursued. Members exchange tips, celebrate milestones, and provide emotional support during challenging times. This camaraderie helps individuals stay committed to their fitness routines, knowing they are part of a supportive network that values their progress. The social interactions in the gym also contribute to mental well-being, reducing feelings of isolation and promoting a sense of community. The diversity within a gym community, as shown in the image, highlights how fitness transcends cultural and demographic boundaries. People from various backgrounds and walks of life come together, united by a common goal of improving their health and fitness. This diversity enriches the community, offering varied perspectives and experiences that enhance the overall gym experience. Moreover, the gym community often extends beyond the physical space, with members connecting through social media, fitness apps, and group activities outside the gym. These connections further strengthen the bonds formed within the gym, creating a lifelong network of fitness enthusiasts who support each other's endeavours. In conclusion, the gym community is more than just a group of people working out together; it is a supportive network that fosters personal growth, motivation, and lasting friendships. The shared commitment to health and fitness creates a powerful sense of unity and belonging, making the gym an essential part of many individuals' lives.</p>
+                    </div>
+                    <div class="home-img">
+                        <figure class="fig-mission">
+                            <img src="images-gym-app/frederick-shaw-8_dlc8tOpcc-unsplash.jpg" alt="Group photo of gym buddies - Fredrick Shaw">
+                            <figcaption><a href="https://unsplash.com/photos/a-group-of-men-standing-next-to-each-other-in-a-gym-8_dlc8tOpcc" target="_blank" class="caption-link">Group photo of gym buddies - Fredrick Shaw</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+
+        <div id="home-info-1">
+            <div class="container">
+                <div class="home-cols">
+                    <div class="home-img">
+                        <figure class="fig-mission">
+                            <img src="images-gym-app/daniel-apodaca-WdoQio6HPVA-unsplash.jpg" alt="Workout - Daniel Apodaca">
+                            <figcaption><a href="https://unsplash.com/photos/grayscale-photo-of-man-exercising-WdoQio6HPVA" target="_blank" class="caption-link">Workout - Daniel Apodaca</a></figcaption>
+                        </figure>
+                    </div>
+                    <div class="mission-desc">
+                        <h3>Gym Routine Significance</h3>
+                        <p>Maintaining a consistent gym routine is crucial for building muscle effectively. Consistency ensures that the muscles are regularly challenged and stimulated, which is essential for hypertrophy, the process where muscle fibres grow in response to resistance training. When workouts are performed consistently, it allows for progressive overload, a fundamental principle in muscle building where the intensity, volume, or frequency of exercises is gradually increased. This continual challenge forces muscles to adapt, grow stronger, and increase in size over time. Inconsistent training, on the other hand, can lead to suboptimal results as muscles do not receive the regular stimulation needed for growth.A consistent routine also helps in establishing a structured approach to workouts, ensuring that all major muscle groups are targeted appropriately. This balanced approach prevents muscle imbalances, reduces the risk of injury, and promotes overall physical development. Moreover, regular exercise enhances the body's metabolic rate and improves nutrient partitioning, meaning the body becomes more efficient at using the nutrients from food to repair and grow muscle tissue.Beyond physical benefits, a consistent gym routine fosters mental discipline and commitment. It ingrains a sense of routine and purpose, which can be motivating and rewarding. The predictability of a set schedule helps in tracking progress accurately, setting achievable goals, and celebrating milestones, which can be incredibly motivating. This regularity also helps in developing healthy habits, such as proper nutrition and adequate rest, both of which are essential for muscle growth and recovery. Furthermore, consistency in the gym can have positive impacts on mental health. Regular physical activity is known to reduce stress, anxiety, and depression while improving mood and cognitive function. This mental clarity and emotional stability can further enhance one's dedication to their fitness goals. In conclusion, a consistent gym routine is fundamental for building muscle, not only due to the physical demands it places on the body but also because of the structure, discipline, and mental benefits it provides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="home-info-2">
+            <div class="container">
+                <div class="home-cols">
+                    <div class="mission-desc">
+                        <h3>Supplements To Help Build Muscle</h3>
+                        <p>Supplements like creatine and protein powder play a significant role in supporting muscle building efforts in the gym. Creatine is one of the most researched and effective supplements for enhancing strength and muscle mass. It works by increasing the availability of ATP (adenosine triphosphate), the primary energy carrier in muscle cells, allowing for more intense and prolonged training sessions. This increase in workout intensity and duration enables lifters to push their muscles harder, leading to greater gains in muscle size and strength. Creatine also promotes cellular hydration, which can enhance muscle recovery and reduce fatigue, allowing for more consistent and effective training. Protein powder, another essential supplement, provides a convenient and efficient way to meet daily protein requirements, which are crucial for muscle repair and growth. Protein is composed of amino acids, the building blocks of muscle tissue. After intense workouts, the body requires a significant amount of protein to repair the microscopic tears in muscle fibres, leading to muscle growth during the recovery phase. Protein powders, such as whey, casein, or plant-based options, offer a quick and easily digestible source of high-quality protein, ensuring that the body gets the necessary nutrients to kickstart the recovery process. The importance of these supplements extends beyond mere convenience. For many athletes and bodybuilders, meeting the high protein demands through whole foods alone can be challenging and impractical due to time constraints, dietary preferences, or digestive issues. Supplements provide a reliable and controlled source of essential nutrients that can be tailored to individual dietary needs and fitness goals. Moreover, the use of supplements can enhance overall nutrition, ensuring that no gaps in the diet hinder muscle building. While supplements should not replace whole foods, they can effectively complement a balanced diet, filling in nutritional gaps and optimising performance. In conclusion, supplements like creatine and protein powder are vital tools for anyone serious about building muscle, providing the necessary nutrients to support intense training, enhance recovery, and promote muscle growth efficiently.</p>
+                    </div>
+                    <div class="home-img">
+                        <figure class="fig-mission">
+                            <img src="images-gym-app/aleksander-saks-lVZGEyL_j40-unsplash.jpg" alt="Supplements - Aleksander Saks">
+                            <figcaption><a href="https://unsplash.com/photos/a-bottle-of-creatine-next-to-a-spoon-on-a-table-lVZGEyL_j40" target="_blank" class="caption-link">Supplements - Aleksander Saks</a></figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="workout">
+        <h1>Workout</h1>
+        <div class="container">
+            <input type="text" id="workout-title" placeholder="User title of workout">
+            <div id="workout-time" onclick="toggleTimer()">00:00</div>
+            <button id="reset-timer" onclick="resetTimer()">Reset</button>
+            <div id="workout-rating" data-rating="0">
+                Workout self-rating: 
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+            </div>
+            <div id="exercise-list"></div>
+            <button id="add-exercise">Add Exercise</button>
+            <button id="cancel-workout">Cancel Workout</button>
+            <button id="finish-workout">Finish Workout</button>
+        </div>
+    </div>
+
+    <div id="exercise-selection" class="container">
+        <div class="exercise-grid">
+            <div class="exercise-item" onclick="selectExercise('Dumbbell Bicep Curls')">
+                <img src="images-gym-app/ulf-meyer-qoRYoLTkO-Y-unsplash.jpg" alt="Dumbbell Bicep Curls - Ulf Meyer - unsplash.com">
+                <h4>Dumbbell Bicep Curls</h4>
+                <p>Builds bicep strength.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Bench Press')">
+                <img src="images-gym-app/michael-demoya-i2GS_MtW9hM-unsplash.jpg" alt="Bench Press - Michael DeMoya - unsplash.com">
+                <h4>Bench Press</h4>
+                <p>Strengthens chest muscles.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Lat Pulldowns')">
+                <img src="images-gym-app/fitnish-media-aVscF83pOxk-unsplash.jpg" alt="Lat Pulldowns - FitNish Media - unsplash.com">
+                <h4>Lat Pulldowns</h4>
+                <p>Builds back muscles.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Squats')">
+                <img src="images-gym-app/benjamin-klaver-zAtTuN6Ykok-unsplash.jpg" alt="Squats - Benjamin Klaver - unsplash.com">
+                <h4>Squats</h4>
+                <p>Strengthens leg muscles.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Tricep Dips')">
+                <img src="images-gym-app/john-fornander-dMWL8V7L8G4-unsplash.jpg" alt="Tricep Dips - John Fornander - unsplash.com">
+                <h4>Tricep Dips</h4>
+                <p>Builds tricep strength.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Deadlifts')">
+                <img src="images-gym-app/alora-griffiths-E3wehabi_B4-unsplash.jpg" alt="Deadlifts - Alora Griffiths - unsplash.com">
+                <h4>Deadlifts</h4>
+                <p>Strengthens back and legs.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Shoulder Press')">
+                <img src="images-gym-app/bruce-mars-WGN6ZEFEZbs-unsplash.jpg" alt="Shoulder Press - Bruce Mars - unsplash.com">
+                <h4>Shoulder Press</h4>
+                <p>Builds shoulder strength.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Lunges')">
+                <img src="images-gym-app/nikola-murniece-XpBI38qtskw-unsplash.jpg" alt="Lunges - Nikola Murniece - unsplash.com">
+                <h4>Lunges</h4>
+                <p>Strengthens leg muscles.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Chest Fly')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Chest Fly">
+                <h4>Chest Fly</h4>
+                <p>Builds chest strength.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Pull-Ups')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Pull-Ups">
+                <h4>Pull-Ups</h4>
+                <p>Strengthens back muscles.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Leg Press')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Leg Press">
+                <h4>Leg Press</h4>
+                <p>Builds leg strength.</p>
+            </div>
+            <div class="exercise-item" onclick="selectExercise('Tricep Pushdowns')">
+                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Tricep Pushdowns">
+                <h4>Tricep Pushdowns</h4>
+                <p>Strengthens triceps.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="history">
+        <h1>History</h1>
+        <div class="container">
+            <div id="workout-history"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
