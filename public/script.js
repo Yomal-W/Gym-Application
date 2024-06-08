@@ -1,18 +1,22 @@
+// Variables to keep track of the timer and exercises
 let timer;
 let timerRunning = false;
 let elapsedSeconds = 0;
 let exercises = [];
-let workoutHistory = JSON.parse(localStorage.getItem('workoutHistory')) || [];
+let workoutHistory = JSON.parse(localStorage.getItem('workoutHistory')) || []; //Acknowledgement of ChatGPT - Prompt: In JavaScript, how can I store and retrieve an array of objects from local storage?
 
-// Load workout history on page load
+// When the page loads, render the workout history
 document.addEventListener('DOMContentLoaded', () => {
     renderHistory();
 });
 
+// Function to toggle the timer on and off
 function toggleTimer() {
     if (timerRunning) {
+        // If timer is running, stop it
         clearInterval(timer);
     } else {
+        // If timer is not running, start it
         timer = setInterval(() => {
             elapsedSeconds++;
             document.getElementById('workout-time').innerText = formatTime(elapsedSeconds);
@@ -21,6 +25,7 @@ function toggleTimer() {
     timerRunning = !timerRunning;
 }
 
+// Function to reset the timer
 function resetTimer() {
     clearInterval(timer);
     timerRunning = false;
@@ -28,35 +33,43 @@ function resetTimer() {
     document.getElementById('workout-time').innerText = formatTime(elapsedSeconds);
 }
 
+// Function to format time in MM:SS
 function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
 }
 
-document.querySelectorAll('#workout-rating .star').forEach(star => {
+// Add click event listeners to stars for workout rating
+document.querySelectorAll('#workout-rating .star').forEach(star => { //Acknowledgement of ChatGPT - Prompt: Process of creating a star rating system with JavaScript
     star.addEventListener('click', (e) => {
         const rating = e.target.getAttribute('data-value');
         updateRating(rating);
     });
 });
 
+// Function to update workout rating
 function updateRating(rating) {
-    document.querySelectorAll('#workout-rating .star').forEach(star => {
+    document.querySelectorAll('#workout-rating .star').forEach(star => { //Acknowledgement of ChatGPT - Prompt: I am having trouble changingg the colour of the stars when they are clicked. How can I fix this?
         if (star.getAttribute('data-value') <= rating) {
-            star.style.color = 'yellow';
+            // Fill the star if it's less than or equal to the rating
+            star.style.color = '#333333';
+            star.style.webkitTextStroke = '1px #333333';
         } else {
+            // Empty the star if it's greater than the rating
             star.style.color = 'transparent';
-            star.style.webkitTextStroke = '1px yellow';
+            star.style.webkitTextStroke = '1px #333333';
         }
     });
     document.getElementById('workout-rating').setAttribute('data-rating', rating);
 }
 
+// Show the exercise selection screen when "Add Exercise" is clicked
 document.getElementById('add-exercise').addEventListener('click', () => {
     document.getElementById('exercise-selection').style.display = 'block';
 });
 
+// Function to select an exercise
 function selectExercise(exerciseName) {
     document.getElementById('exercise-selection').style.display = 'none';
     exercises.push({
@@ -66,7 +79,8 @@ function selectExercise(exerciseName) {
     renderExercises();
 }
 
-function renderExercises() {
+// Function to render exercises
+function renderExercises() { //Acknowledgement of ChatGPT - Prompt: I have made an excersise array. What is the process of writing JavaScript where a function renders dynamically based on the exercises array. 
     const exerciseList = document.getElementById('exercise-list');
     exerciseList.innerHTML = '';
     exercises.forEach((exercise, index) => {
@@ -98,6 +112,7 @@ function renderExercises() {
     });
 }
 
+// Function to add a set to an exercise
 function addSet(exerciseIndex) {
     const kg = prompt('Enter weight (kg):');
     const reps = prompt('Enter reps:');
@@ -109,6 +124,7 @@ function addSet(exerciseIndex) {
     renderExercises();
 }
 
+// Function to remove the last set from an exercise
 function removeSet(exerciseIndex) {
     if (exercises[exerciseIndex].sets.length > 0) {
         exercises[exerciseIndex].sets.pop();
@@ -116,11 +132,13 @@ function removeSet(exerciseIndex) {
     renderExercises();
 }
 
+// Function to remove an exercise
 function removeExercise(exerciseIndex) {
     exercises.splice(exerciseIndex, 1);
     renderExercises();
 }
 
+// When "Finish Workout" is clicked, save the workout and reset
 document.getElementById('finish-workout').addEventListener('click', () => {
     const workoutTitle = document.getElementById('workout-title').value;
     const workoutTime = document.getElementById('workout-time').innerText;
@@ -140,13 +158,15 @@ document.getElementById('finish-workout').addEventListener('click', () => {
         }))
     };
 
+    // Save workout to history
     workoutHistory.push(workoutData);
     localStorage.setItem('workoutHistory', JSON.stringify(workoutHistory));
     renderHistory();
     clearWorkout();
 });
 
-function calculateAverageWeight() {
+// Function to calculate average weight lifted
+function calculateAverageWeight() { //Acknowledgement of ChatGPT - Prompt: How can I calculate the average value of an array of objects in JavaScript?
     let totalWeight = 0;
     let totalSets = 0;
     exercises.forEach(exercise => {
@@ -158,10 +178,11 @@ function calculateAverageWeight() {
     return totalSets === 0 ? 0 : (totalWeight / totalSets).toFixed(2);
 }
 
+// Function to render workout history
 function renderHistory() {
     const historyContainer = document.getElementById('workout-history');
     historyContainer.innerHTML = '';
-    workoutHistory.forEach(workout => {
+    workoutHistory.forEach((workout, index) => {
         const workoutElement = document.createElement('div');
         workoutElement.className = 'history-item';
         workoutElement.innerHTML = `
@@ -174,11 +195,20 @@ function renderHistory() {
                     <p>${ex.sets} x ${ex.name}</p>
                 `).join('')}
             </div>
+            <button onclick="deleteWorkout(${index})">Delete</button>
         `;
         historyContainer.appendChild(workoutElement);
     });
 }
 
+// Function to delete a workout from history
+function deleteWorkout(index) {
+    workoutHistory.splice(index, 1);
+    localStorage.setItem('workoutHistory', JSON.stringify(workoutHistory));
+    renderHistory();
+}
+
+// Function to clear workout form
 function clearWorkout() {
     document.getElementById('workout-title').value = '';
     resetTimer();
@@ -187,7 +217,7 @@ function clearWorkout() {
     renderExercises();
 }
 
+// Cancel workout button clears the form
 document.getElementById('cancel-workout').addEventListener('click', () => {
     clearWorkout();
 });
-

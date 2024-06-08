@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yomal Wannigama"> 
     <title>Gym Application</title>
     <link rel="stylesheet" href="style.css">
+
+    <!--GitHub repository https://github.com/Yomal-W/Gym-Application -->
+    <!--Fonts from https://fonts.google.com/ -->
+    <!--Images are from https://unsplash.com/ -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Comfortaa:wght@300..700&family=Habibi&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header with navigation buttons -->
     <div id="header">
         <div class="container">
             <nav>
                 <ul>
+                    <!-- Links to different sections of the page Home, Workout and History section -->
                     <a href="#home"><button><li>Home</li></button></a>
                     <a href="#workout"><button><li>Workout</li></button></a>
                     <a href="#history"><button><li>History</li></button></a>
@@ -19,6 +30,7 @@
         </div>
     </div>
 
+    <!-- Home Section -->
     <div id="home">
         <h1>Home</h1>
         <div id="home-info-1">
@@ -26,11 +38,13 @@
                 <div class="home-cols">
                     <div class="home-img">
                         <figure class="fig-mission">
-                            <img src="images-gym-app/anna-pelzer-IGfIGP5ONV0-unsplash.jpg" alt="Vegan salad bowl - Anna Pelzer">
+                            <!-- Home info example image and caption link that goes to the unsplash photo author -->
+                            <img src="images-gym-app/anna-pelzer-IGfIGP5ONV0-unsplash.jpg" alt="Kanye">
                             <figcaption><a href="https://unsplash.com/photos/bowl-of-vegetable-salads-IGfIGP5ONV0" target="_blank" class="caption-link">Vegan salad bowl - Anna Pelzer</a></figcaption>
                         </figure>
                     </div>
                     <div class="mission-desc">
+                        <!-- Home info description with heading -->
                         <h3>The Importance Of Nutrition</h3>
                         <p>Nutrition plays an integral role in enhancing gym performance and achieving muscle-building goals. Consuming nutrient-dense meals, like the one depicted in the image, is essential for providing the body with the vital vitamins, minerals, and macronutrients necessary for energy production, muscle repair, and overall health. A balanced plate featuring a variety of colourful vegetables, legumes, healthy fats, and complex carbohydrates supports sustained energy levels throughout workouts, enhances muscle recovery post-exercise, and aids in effective weight management. Vegetables, such as leafy greens, tomatoes, and bell peppers, are rich in vitamins A, C, and K, fibre, and antioxidants, which help reduce inflammation and oxidative stress. Legumes, like chickpeas, offer a high protein content along with essential minerals like iron and magnesium, crucial for muscle repair and growth. Healthy fats, particularly from sources like avocado, provide monounsaturated fats, potassium, and fibre, supporting heart health and aiding in the absorption of fat-soluble vitamins. Complex carbohydrates from sweet potatoes deliver a slow-release source of energy, ideal for prolonged physical activities. Incorporating a variety of foods ensures a comprehensive range of nutrients, essential for overall well-being. Proper meal timing around workouts is also crucial. Consuming a balanced meal rich in carbohydrates and protein 2-3 hours before a workout ensures adequate energy supply, while a post-workout meal or snack within 30 minutes to 2 hours aids in muscle recovery and replenishment of glycogen stores. Additionally, staying hydrated with water-rich foods and adequate fluid intake is vital for maintaining optimal bodily functions and muscle performance. By prioritising balanced nutrition and hydration, gym-goers can effectively fuel their workouts, enhance performance, support muscle growth, and achieve their fitness goals. This holistic approach to diet and exercise fosters not only physical improvements but also contributes to overall health and well-being, making it a fundamental aspect of any fitness regimen.</p>
                     </div>
@@ -47,7 +61,7 @@
                     </div>
                     <div class="home-img">
                         <figure class="fig-mission">
-                            <img src="images-gym-app/frederick-shaw-8_dlc8tOpcc-unsplash.jpg" alt="Group photo of gym buddies - Fredrick Shaw">
+                            <img src="images-gym-app/frederick-shaw-8_dlc8tOpcc-unsplash.jpg" alt="Kanye">
                             <figcaption><a href="https://unsplash.com/photos/a-group-of-men-standing-next-to-each-other-in-a-gym-8_dlc8tOpcc" target="_blank" class="caption-link">Group photo of gym buddies - Fredrick Shaw</a></figcaption>
                         </figure>
                     </div>
@@ -60,7 +74,7 @@
                 <div class="home-cols">
                     <div class="home-img">
                         <figure class="fig-mission">
-                            <img src="images-gym-app/daniel-apodaca-WdoQio6HPVA-unsplash.jpg" alt="Workout - Daniel Apodaca">
+                            <img src="images-gym-app/daniel-apodaca-WdoQio6HPVA-unsplash.jpg" alt="Kanye">
                             <figcaption><a href="https://unsplash.com/photos/grayscale-photo-of-man-exercising-WdoQio6HPVA" target="_blank" class="caption-link">Workout - Daniel Apodaca</a></figcaption>
                         </figure>
                     </div>
@@ -81,7 +95,7 @@
                     </div>
                     <div class="home-img">
                         <figure class="fig-mission">
-                            <img src="images-gym-app/aleksander-saks-lVZGEyL_j40-unsplash.jpg" alt="Supplements - Aleksander Saks">
+                            <img src="images-gym-app/aleksander-saks-lVZGEyL_j40-unsplash.jpg" alt="Kanye">
                             <figcaption><a href="https://unsplash.com/photos/a-bottle-of-creatine-next-to-a-spoon-on-a-table-lVZGEyL_j40" target="_blank" class="caption-link">Supplements - Aleksander Saks</a></figcaption>
                         </figure>
                     </div>
@@ -90,12 +104,16 @@
         </div>
     </div>
 
+    <!-- Workout Section -->
     <div id="workout">
         <h1>Workout</h1>
         <div class="container">
+            <!-- Input for the workout title -->
             <input type="text" id="workout-title" placeholder="User title of workout">
+            <!-- Timer display -->
             <div id="workout-time" onclick="toggleTimer()">00:00</div>
             <button id="reset-timer" onclick="resetTimer()">Reset</button>
+            <!-- Star rating system for the workout -->
             <div id="workout-rating" data-rating="0">
                 Workout self-rating: 
                 <span class="star" data-value="1">★</span>
@@ -103,6 +121,7 @@
                 <span class="star" data-value="3">★</span>
                 <span class="star" data-value="4">★</span>
             </div>
+            <!-- List of exercises -->
             <div id="exercise-list"></div>
             <button id="add-exercise">Add Exercise</button>
             <button id="cancel-workout">Cancel Workout</button>
@@ -110,8 +129,11 @@
         </div>
     </div>
 
+    <!-- Exercise Selection Section -->
     <div id="exercise-selection" class="container">
+        <h1>Exercise Selection</h1>
         <div class="exercise-grid">
+            <!-- Example exercise items -->
             <div class="exercise-item" onclick="selectExercise('Dumbbell Bicep Curls')">
                 <img src="images-gym-app/ulf-meyer-qoRYoLTkO-Y-unsplash.jpg" alt="Dumbbell Bicep Curls - Ulf Meyer - unsplash.com">
                 <h4>Dumbbell Bicep Curls</h4>
@@ -153,33 +175,32 @@
                 <p>Strengthens leg muscles.</p>
             </div>
             <div class="exercise-item" onclick="selectExercise('Chest Fly')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Chest Fly">
+                <img src="images-gym-app/gordon-cowie-RKrwVMiW-ik-unsplash.jpg" alt="Chest Fly - Gordon Cowie - unsplash.com">
                 <h4>Chest Fly</h4>
                 <p>Builds chest strength.</p>
             </div>
             <div class="exercise-item" onclick="selectExercise('Pull-Ups')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Pull-Ups">
+                <img src="images-gym-app/richard-r--jdfUP2N7Os-unsplash.jpg" alt="Pull-Ups - Richard R - unsplash.com">
                 <h4>Pull-Ups</h4>
                 <p>Strengthens back muscles.</p>
             </div>
             <div class="exercise-item" onclick="selectExercise('Leg Press')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Leg Press">
+                <img src="images-gym-app/scott-webb-xwMlVSqP20U-unsplash.jpg" alt="Leg Press - Scott Webb - unsplash.com">
                 <h4>Leg Press</h4>
                 <p>Builds leg strength.</p>
             </div>
             <div class="exercise-item" onclick="selectExercise('Tricep Pushdowns')">
-                <img src="images-gym-app/graduation-album-cover-kanye-west.jpg" alt="Tricep Pushdowns">
+                <img src="images-gym-app/daniel-apodaca-WdoQio6HPVA-unsplash.jpg" alt="Tricep Pushdowns - Daniel Apodaca - unsplash.com">
                 <h4>Tricep Pushdowns</h4>
                 <p>Strengthens triceps.</p>
             </div>
         </div>
     </div>
 
-    <div id="history">
+    <!-- History Section -->
+    <div id="history" class="container">
         <h1>History</h1>
-        <div class="container">
-            <div id="workout-history"></div>
-        </div>
+        <div id="workout-history"></div>
     </div>
 
     <script src="script.js"></script>

@@ -1,307 +1,361 @@
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Martel', serif;
-    color: #f6f8f9;
+    font-family: 'Catamaran', sans-serif;
+    color: #333333; /* Text colour */
 }
 
+/* Header */
 #header {
-    background-color: #0e1315;
+    background-color: #ffffff; /* Primary colour */
 }
 
+/* Container */
 .container {
     padding: 50px 5%;
 }
 
+/* Navigation */
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row wrap;
+    display: flex; /* Flexbox for navigation layout */
+    justify-content: center; 
+    align-items: center; 
+    flex-flow: row wrap; 
 }
 
 nav ul button {
-    display: inline-block;
-    list-style: none;
+    display: inline-block; 
+    list-style: none; 
     margin: 0px 8px;
     padding: 15px;
-    border: none;
-    border-radius: 30px;
-    will-change: background-color;
-    transition: background-color 450ms ease;
-    background-color: #493a32;
+    border: none; 
+    border-radius: 30px; /* Rounded corners for buttons */
+    will-change: background-color; /* Performance optimization for transitions */
+    transition: background-color 450ms ease; /* Smooth background transition */
+    background-color: #cccccc; /* Secondary colour */
+    font-family: 'Comfortaa', sans-serif; /* Font for buttons */
 }
 
 nav ul button:hover {
-    transition: background-color 250ms ease;
-    background-color: #c7b6ad;
+    transition: background-color 250ms ease; 
+    background-color: #666666; /* Accent colour */
 }
 
 nav ul button li {
-    will-change: color;
-    transition: color 450ms ease;
+    will-change: color; 
+    transition: color 450ms ease; 
 }
 
 nav ul button:hover li {
-    transition: color 250ms ease;
-    color: #0e1315;
+    transition: color 250ms ease; 
+    color: #ffffff; /* Primary colour */
 }
 
 nav .current-tab-title {
-    font-family: 'Merriweather Sans', sans-serif;
-    font-size: 42px;
-    background: linear-gradient(-90deg, #c7b6ad, #493a32);
+    font-family: 'Habibi', serif; /* Font for current tab title */
+    font-size: 42px; 
+    background: linear-gradient(-90deg, #666666, #cccccc); /* Gradient background */
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: transparent; /* Transparent text to show gradient */
 }
 
 nav ul li {
-    text-decoration: none;
-    font-family: 'Proza Libre', sans-serif;
+    text-decoration: none; 
 }
 
 .active-tab {
-    background-color: #c7b6ad;
+    background-color: #666666; /* Accent colour for active tab */
 }
 
 .active-tab li {
-    color: #0e1315;
+    color: #ffffff; /* Primary colour for active tab text */
 }
 
+/* Home Section */
 #home {
-    background: #080906;
+    background: #f9f9f9; /* Background colour */
     padding: 50px 5%;
 }
 
 #home-info-1, #home-info-2 {
-    background: #080906;
+    background: #f9f9f9; 
 }
 
 .home-cols {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+    display: flex; 
+    justify-content: space-between; 
+    flex-flow: row wrap; 
 }
 
 .mission-desc h3 {
-    padding-bottom: 25px;
-    font-family: 'Proza Libre', sans-serif;
-    font-size: 25px;
+    padding-bottom: 25px; 
+    font-family: 'Habibi', serif; 
+    font-size: 25px; 
 }
 
 .mission-desc {
-    flex-basis: 55%;
+    flex-basis: 55%; 
 }
 
 .home-img {
-    flex-basis: 40%;
+    flex-basis: 40%; 
 }
 
 .fig-mission {
-    will-change: transform;
-    transition: transform 0.4s ease;
+    will-change: transform; 
+    transition: transform 0.4s ease; 
 }
 
 .fig-mission:hover {
-    transition: transform 0.2s ease;
-    transform: scale(1.05);
+    transition: transform 0.2s ease; 
+    transform: scale(1.05); /* Scale up on hover */
 }
 
 .fig-mission img {
-    width: 100%;
-    border-radius: 40px;
+    width: 100%; 
+    border-radius: 40px; 
 }
 
 .fig-mission figcaption {
-    text-align: center;
-    padding-top: 10px;
+    text-align: center; 
+    padding-top: 10px; 
 }
 
 .caption-link, .caption-link:link, .caption-link:visited, .caption-link:active {
-    text-decoration: none;
-    color: #f6f8f9;
+    text-decoration: none; 
+    color: #333333; 
 }
 
 .caption-link:hover {
-    color: #c7b6ad;
+    color: #666666; 
 }
 
 #home h1, #workout h1, #history h1, #exercise-selection h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #c7b6ad;
+    font-size: 36px; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    color: #333333; 
+    font-family: 'Habibi', serif; 
 }
 
+/* Workout Section */
 #workout {
-    background-color: #080906;
+    background-color: #f9f9f9; 
     padding: 50px 5%;
 }
 
 #workout-title {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
+    width: 100%; 
+    padding: 10px; 
+    font-size: 18px; 
+    margin-bottom: 20px; 
+    border-radius: 5px; 
+    border: none; 
 }
 
 #workout-time {
-    font-size: 24px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    display: inline-block;
+    font-size: 24px; 
+    cursor: pointer; 
+    margin-bottom: 20px; 
+    display: inline-block; 
 }
 
 #reset-timer {
-    display: inline-block;
-    padding: 5px 10px;
-    font-size: 16px;
-    margin-left: 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #493a32;
-    color: #f6f8f9;
-    cursor: pointer;
-    transition: background-color 250ms ease;
+    display: inline-block; 
+    padding: 5px 10px; 
+    font-size: 16px; 
+    margin-left: 20px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #cccccc; 
+    color: #333333; 
+    cursor: pointer; 
+    transition: background-color 250ms ease; 
+    font-family: 'Comfortaa', sans-serif; 
 }
 
 #reset-timer:hover {
-    background-color: #c7b6ad;
+    background-color: #666666; 
+    color: #ffffff; 
 }
 
 #workout-rating {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 18px; 
+    margin-bottom: 20px; 
 }
 
 #workout-rating .star {
-    font-size: 24px;
-    cursor: pointer;
+    font-size: 24px; 
+    cursor: pointer; 
+    color: transparent; 
+    -webkit-text-stroke: 1px #333333; /* Dark grey stroke for stars */
+}
+
+#workout-rating .star.filled {
+    color: #333333; 
+    -webkit-text-stroke: 1px #333333; 
 }
 
 #add-exercise, #cancel-workout, #finish-workout {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #493a32;
-    color: #f6f8f9;
-    cursor: pointer;
-    transition: background-color 250ms ease;
+    display: inline-block; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    margin: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #cccccc; 
+    color: #333333; 
+    cursor: pointer; 
+    transition: background-color 250ms ease; 
+    font-family: 'Comfortaa', sans-serif; 
 }
 
 #add-exercise:hover, #cancel-workout:hover, #finish-workout:hover {
-    background-color: #c7b6ad;
+    background-color: #666666; 
+    color: #ffffff; 
 }
 
+/* Exercise Selection */
 #exercise-selection {
-    display: none;
-    background-color: #080906;
+    display: none; 
+    background-color: #f9f9f9; 
     padding: 50px 5%;
 }
 
 .exercise-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    display: grid; /* Grid display for exercises */
+    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    gap: 20px; 
 }
 
 .exercise-item {
-    background-color: #493a32;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
+    background-color: #cccccc; 
+    border-radius: 10px; 
+    padding: 10px; 
+    text-align: center; 
+    cursor: pointer; 
+    transition: transform 0.2s; 
 }
 
 .exercise-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
 }
 
 .exercise-item img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%; 
+    border-radius: 10px; 
 }
 
 .exercise-item h4 {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #f6f8f9;
+    margin-top: 10px; 
+    font-size: 18px; 
+    color: #333333; 
 }
 
 .exercise-item p {
-    font-size: 14px;
-    color: #c7b6ad;
+    font-size: 14px; 
+    color: #666666; 
 }
 
 #exercise-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
 
 .exercise {
-    flex-basis: 45%;
-    margin-bottom: 20px;
-    background-color: #493a32;
-    border-radius: 10px;
-    padding: 10px;
-    color: #f6f8f9;
+    flex-basis: 45%; 
+    margin-bottom: 20px; 
+    background-color: #cccccc; 
+    border-radius: 10px; 
+    padding: 10px; 
+    color: #333333; 
 }
 
 .exercise table {
-    width: 100%;
-    margin-top: 10px;
+    width: 100%; 
+    margin-top: 10px; 
 }
 
 .exercise th, .exercise td {
-    text-align: center;
-    padding: 5px;
+    text-align: center; 
+    padding: 5px; 
 }
 
 .exercise button {
-    margin-top: 10px;
-    border: none;
-    background-color: #c7b6ad;
-    color: #0e1315;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px; 
+    border: none; 
+    background-color: #666666; 
+    color: #ffffff; 
+    padding: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
+/* History Section */
 #history {
-    background-color: #080906;
+    background-color: #f9f9f9; 
     padding: 50px 5%;
 }
 
 .history-item {
-    background-color: #493a32;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    color: #f6f8f9;
+    background-color: #cccccc; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+    border-radius: 10px; 
+    color: #333333; 
 }
 
 .history-item h4 {
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
 
 .history-item p {
-    margin-bottom: 5px;
+    margin-bottom: 5px; 
 }
 
 .history-item button {
-    margin-top: 10px;
-    border: none;
-    background-color: #c7b6ad;
-    color: #0e1315;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px; 
+    border: none; 
+    background-color: #666666; 
+    color: #ffffff; 
+    padding: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+/* Media Queries for Responsiveness for smaller screens like mobile */
+@media (max-width: 768px) {
+    .home-cols {
+        flex-direction: column; /* Stack columns vertically on mobile */
+        align-items: center;
+    }
+
+    .mission-desc, .home-img {
+        flex-basis: 100%; /* Full width for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Vertical navigation for mobile */
+    }
+
+    nav ul button {
+        margin: 10px 0; /* Space between buttons on mobile */
+    }
+
+    .exercise-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout on mobile */
+    }
+
+    .exercise {
+        flex-basis: 100%; /* Full width for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .exercise-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller mobile screens */
+    }
 }
